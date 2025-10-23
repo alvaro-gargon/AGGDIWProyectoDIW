@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        /* body{
+            font-size: 0;
+        } */
+        div{
+            background-color: pink;
+            margin-bottom: 5px;
+            width: 300px;
+            /* display: inline-block; */
+            /* font-size: 1.5rem; si juntas esto con lo del body puedes quitar el espacio entre cajas */
+            padding: 10px;
+            border: 10px solid red;
+            float: left;
+        }
+        span{
+            background-color: yellow;
+        }
+        section div:nth-child(2){
+            background-color: aqua;
+        }
+        section div:last-child{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>Caja 1 es block</div>
+        <div>Caja 2</div>
+        <div>Caja 3</div>
+    </section>
+    <span>span es inline</span>
+    <span>span 2 es inline</span>
+</body>
+</html>

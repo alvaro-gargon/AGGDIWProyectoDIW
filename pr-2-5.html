@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR-2-5</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 1.1rem;
+        }
+        .container{
+            background-color: #fcf7bb;
+            & label, input{
+                display: inline-block;
+                margin-bottom: 10px;
+                
+            }
+            
+            & fieldset:nth-of-type(1) {
+                & label{
+                width: 180px;
+                }
+                & input{
+                    height: 48px;width: 240px;
+                    border: transparent;
+                    border-radius: 5px;
+                }
+                & input:nth-child(even){
+                    background-color: #f5c0cc;
+                }
+                & #mail:valid{background-color: #9fffd2;}
+                & #mail:invalid{background-color: red;
+                outline: 4px solid black;}
+            }
+            & fieldset:nth-of-type(2){
+                & table{
+                    width: 100%;
+                    table-layout: fixed;
+                    & td{
+                        height: 56px;
+                        background: plum;
+                        padding-left: 10px;
+                    }
+                }
+            }
+            & fieldset:nth-of-type(3) {
+                & label, input{
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                & #age:out-of-range{
+                    background-color: red;
+                }
+                & #age:in-range{
+                    background-color: #9fffd2;
+                }
+            }
+            & form > input{
+                display: block;
+                width: 200px;height: 80px;
+                border-radius: 5px;
+                margin: 5px auto;
+                background-color: red;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <fieldset>
+                <legend>Pseudo-clases en formularios</legend>
+                <label for="nombre">:autofocus</label>
+                <input type="text" id="nombre" autofocus placeholder="Nombre" minlength="2">
+                <br>
+                <label for="apellidos">:required</label>
+                <input type="text" id="apellidos" required placeholder="Apellidos">
+                <br>
+                <label for="mail">:valid/invalid</label>
+                <input type="email" id="mail"  placeholder="mail@mail.com">
+                <br>
+                <label for="passwd">Password (8 min)</label>
+                <input type="password" id="passwd" min="8">
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>file,date,color,time</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="archivo">Archivo a subir</label>
+                            <input type="file" id="archivo">
+                        </td>
+                        <td>
+                            <label for="color">Elige color</label>
+                            <input type="color" id="color">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fecha">Fecha de pedido</label>
+                            <input type="date" id="fecha">
+                        </td>
+                        <td>
+                            <label for="hora">Hora:</label>
+                            <input type="time" id="hora">
+                        </td>
+                    </tr>
+                </table>
+                
+                
+            </fieldset>
+            <fieldset>
+                <legend>:checked, :in-range /:out-of-range</legend>
+                <label>Sexo:</label> 
+                <input type="radio" name="sexo"id="man">
+                <label for="man">Hombre</label>
+                <input type="radio" name="sexo"id="woman">
+                <label for="woman">Mujer</label><br>
+
+                <label>Aficiones:</label>
+                <input type="checkbox" id="music">
+                <label for="music">Musica</label>
+
+                <input type="checkbox" id="sports">
+                <label for="sports">Deportes</label>
+
+                <input type="checkbox" id="Reading">
+                <label for="Reading">Lectura</label>
+
+                <input type="checkbox" id="cooking">
+                <label for="cooking">Cocina</label><br>
+
+                <label for="age">Edad (1-120)</label>
+                <input type="number" id="age" min="1" max="120" placeholder="1">
+
+                <label for="search">Buscar</label>
+                <input type="search" id="search">
+                <label>&#x1F50D</label>
+            </fieldset>
+            <input type="submit" value="Enviar datos">
+        </form>
+
+    </div>
+</body>
+</html>

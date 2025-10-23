@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            min-width: 1000px;
+            width: 95vw;
+        }
+        header{
+            width: 100%;height: 14vh;
+            background-color: #999999 ;
+            & img{
+                width: 100px;
+                display: block;
+                margin: 1vh auto;
+            }
+            
+            & .c1, & .c2, & .c3{
+                display: inline-block;
+                width: 33%;
+            }
+            & .c2{
+                height: 14vh;
+                vertical-align: top;
+                line-height: 14vh;
+                text-align: center;
+                & h1{
+                    margin: 0;
+                }
+            }
+            & .c1 img{
+                margin-left: 50px;
+            }
+            & .c3 img{
+                margin-right: 50px;
+            }
+        }
+
+        .wrapper{
+            width:100% ;
+            height: 76vh;
+            background-color: #ff0033;
+            font-size: 0; /*debido al espacio entre caracteres por el inline */
+            & nav, main, aside{
+                display: inline-block;
+                vertical-align: top;
+                height: 100%;
+                font-size: 1rem; /*por el font-size:0 de arriba*/
+            }
+            & nav{
+                width: 20%; 
+                & ul{
+                    width: 90%;
+                    padding: 10px;
+                    list-style: none;
+                    background-color: #dddddd;
+                    margin-left: 5px;
+                    & li{
+                        height: 24px;
+                    }
+                }
+            } 
+            & main{
+                width: 59%;
+                background-color: #cccccc;
+                & h2,h3,.com{ /* existe seleccion con :not(element)*/
+                    text-align: center;
+                }
+            }& aside{
+                padding-left: 5px;
+                padding-top: 5px;
+            }
+            & aside *{
+                background-color: #dddddd;
+                width: 100%;
+                margin:0;
+            }
+        }
+        footer{
+            height: 10vh;
+            background-color: #555555;
+            padding-top: 3vh;
+            & p{
+                margin: 0 auto;
+                width: max-content;
+            }
+            & :not(p){
+                display: block;
+                width: 200px; height: 20px;
+            }
+            & *{
+                margin: auto;
+            }
+        }
+        /* header{
+            width: 1000px; height: 100%;
+            background-color: #999999;
+            min-width: 1000px;
+            max-width: 1200px;
+            & *{
+                display: inline-block;
+            }
+            & h1{
+                width: max-content;
+                height: 120px;width: 200px;
+                margin: 0 270px;
+                line-height: 120px;
+                vertical-align: top;
+                text-align: center;
+            }
+            & img{
+                width: 100px;
+                max-width:100px;
+                margin: 10px 0px;
+                &:nth-of-type(2){
+                    margin-left: 5px;
+                    margin-right: 50px;
+                } 
+            }
+            
+        } */
+        /* header img{
+            max-width: 100px;
+            padding: 0 16% 0;
+        }
+        header div, h1{
+            display: inline-block;
+            width: 32%;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <header>
+            <div class="c1"><img src="https://picsum.photos/id/250/1200/1200" alt=""></div>
+            <div class="c2"><h1>CABECERA</h1></div>
+            <div class="c3"><img src="https://picsum.photos/id/260/200/200" alt=""></div>
+        </header>
+
+        <!-- <header>
+            <img src="https://picsum.photos/id/250/200/300" alt="">
+            <h1>CABECERA</h1>
+            <img src="https://picsum.photos/id/260/200/300" alt="">
+            
+        </header> -->
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Opciones</a></li>
+                    <li><a href="">Servicios</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+            <main>
+                <article>
+                    <h2>Mi primer articulo</h2>
+                    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem atque, eaque tempora ad, recusandae error possimus similique nisi obcaecati voluptate natus repellat minima, aliquid harum cupiditate sit ab illum consectetur.</span>
+                    <span>Maxime architecto placeat ratione at corporis expedita harum repellat. Ipsam totam excepturi unde quo eius deleniti? Delectus ipsum obcaecati illo, dolore non itaque nihil cum dignissimos voluptatibus eaque veniam laboriosam.</span></p>
+                </article>
+                <article>
+                    <h2>Mi segundo articulo</h2>
+                    <h3>Subtitulo 2 articulo</h3>
+                    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil harum qui doloribus voluptate consequatur? Sequi exercitationem culpa beatae dicta animi aliquid. Consequuntur odio vel itaque temporibus tenetur, unde repellat!</span>
+                    <span>Quod, reprehenderit laborum quaerat minima architecto itaque eveniet amet quasi facilis. Nemo fugit perspiciatis adipisci. Animi asperiores, sunt excepturi id, aliquid velit magnam odio neque libero voluptatibus reiciendis mollitia veniam.</span></p>
+                    <p class="com">comentarios</p>
+                </article>
+                <article>
+                    <h2>Mi tercer articulo</h2>
+                    <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus maiores odit magni! Earum, commodi? Eum provident ab tempora dolor blanditiis voluptatum commodi quod repudiandae amet? Molestias officia porro rerum.</span>
+                    <span>Nemo aliquid, velit doloribus cum facilis laudantium cupiditate optio tenetur odit dolorem quaerat vel aspernatur architecto ducimus itaque. Nihil vitae voluptas repellendus molestias culpa minima cupiditate beatae magni pariatur perspiciatis.</span></p>
+                    <p class="com">comentarios</p>
+                </article>
+            </main>
+            <aside>
+                <p>Aqui tenemos nuestra seccion de links interesantes</p>
+                <p>Elemento: details</p>
+                <details >
+                    
+                    <summary>Lista de datos summary</summary>
+                    <ol type="A">
+                        <li>opcion 1</li>
+                        <li>opcion 2</li>
+                        <li>opcion 3</li>
+                    </ol>
+                </details>
+            </aside>
+        </div>
+        <footer>
+            <p>&#169; Todos los derechos reservados</p>
+            <progress max="200" value="80"></progress>
+            <meter  min="0" low="50" high="200" max="300" value="210"></meter>
+        </footer>
+    </div> 
+    
+</body>
+</html>

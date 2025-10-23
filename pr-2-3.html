@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            background-color: black;
+        }
+        .container{
+            width: 100vw; height: 100vh;
+            & ul{
+                width: 65%;
+                padding: 0 ;
+                margin: 10px;
+                margin-bottom: 60px;
+                list-style: none;
+                & li{
+                    width: 80%; height: 48px;
+                    background-color: pink;
+                    margin: 10px;
+                    text-align: center;
+                    line-height: 48px;
+                    transition:all 0.5s ease;
+                    & a{
+                        text-decoration: none;
+                        color: white;
+                        font-weight: 9
+                        00;
+                    }
+                    
+                }
+                & :hover{
+                    margin-left: 40px;
+                    background-color: purple;
+                    
+                } 
+            }
+
+            & nav{
+                width: 70%;height: 72px;
+                padding: 10px;
+                & a{
+                    display: inline-block;
+                    width: 128px; height: 64px;
+                    
+                    text-align: center;
+                    line-height: 48px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    
+                    &:link{
+                        background-color: white;
+                        color: pink;
+                    }
+                    &:visited{
+                        background-color: pink;
+                        color: white;
+                    }
+                    &:hover{
+                        background-color: violet;
+                        color: black;
+                    }
+                    &:active{
+                        background-color: brown;
+                        color: antiquewhite;
+                    }
+                }
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li><a href="">1 opcion</a></li>
+            <li><a href="">2 opcion</a></li>
+            <li><a href="">3 opcion</a></li>
+            <li><a href="">4 opcion</a></li>
+        </ul>
+
+        <nav>
+            <a href="https://www.educa.jcyl.es/es">EDUCACYL</a>
+            <a href="https://www.marca.com/">MARCA</a>
+            <a href="https://www.youtube.com/?app=desktop&hl=es">VIDEOS</a>
+            <a href="https://unsplash.com/es">IMAGENES</a>
+        </nav>
+    </div>
+    
+</body>
+</html>

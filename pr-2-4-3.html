@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR-2-4-3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        nav{
+            & a{
+                display: inline-block;
+                width: 128px;height: 40px;
+                margin: 25px;
+                line-height: 40px;
+                text-align: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                &:nth-of-type(1){
+                    background-color: pink;
+                }
+                &:nth-of-type(2){
+                    background-color: #bc8f8f;
+                }
+                &:nth-of-type(3){
+                    background-color: orange;
+                }
+            }
+        }
+        article{
+            height: 90vh;
+            & a{
+                display: block;
+                background-color: green;
+                width: 144px;height: 48px;
+                color:white;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                text-decoration: none;
+                text-align: center;
+                line-height: 40px;
+                margin-top: 20px;
+                border-radius: 15px;
+            }
+            &:first-of-type{
+                background-color: gray;
+                color: white;
+            }
+            &:nth-of-type(2){
+                background-color: orange;
+            }
+            &:last-of-type{
+                background-color: aqua;
+            }
+            &:target{
+                font-family: 'Courier New', Courier, monospace;
+                color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p id="Inicio"></p>
+        <nav>
+            <a href="#uno">Primero</a>
+            <a href="#dos">Segundo</a>
+            <a href="#tres">Tercero</a>
+        </nav>
+        <article id="uno">
+            <h2>ARTICULO UNO</h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum nostrum hic deserunt necessitatibus reprehenderit fugiat unde repudiandae quos quaerat sit dignissimos 
+            aspernatur quia quas minima saepe quod vel, sed eius?
+            <a href="#Inicio">Volver</a>
+        </article>
+        <article id="dos">
+            <h2>ARTICULO DOS</h2>
+            Ipsum nisi labore consectetur, alias dolores sed harum iste dignissimos. Corrupti corporis exercitationem quo? Laborum eaque magni ratione dolorum facilis, 
+            ducimus quia consequatur earum iure consequuntur voluptatum officia. Debitis, doloremque.
+            <a href="#Inicio">Volver</a>
+        </article>
+        <article id="tres">
+            <h2>ARTICULO TRES</h2>
+            Eligendi sapiente animi sunt molestiae expedita nulla consectetur, veniam, culpa esse est id eveniet non doloribus necessitatibus possimus illo libero 
+            praesentium asperiores sit vel atque fugiat accusamus. Ipsum, natus non!
+            <a href="#Inicio">Volver</a>
+        </article>
+    </section>
+</body>
+</html>

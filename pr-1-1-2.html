@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR-1-1-2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            width: 32%; height: 48 px;
+            display: inline-block;
+            text-align: center;
+        }
+        span{
+            display: block;
+            line-height: 48px;
+            width: 100%;
+            height: 48px;
+        }
+        span.hide{display: none;}
+        span.hide:hover{display: block;}
+        div:nth-child(1) span:first-child{background-color: #FF0000;}
+        div:nth-child(1) span:last-child{background-color: #00FFFF;}
+        div:nth-child(2) span:first-child{background-color: #00FF00;}
+        div:nth-child(2) span:last-child{background-color: #FF00FF;}
+        div:nth-child(3) span:first-child{background: #0000FF;}
+        div:nth-child(3) span:last-child{background: #FFFF00;}
+        
+        div:hover{span.visible{display: none;} span.hide{display:block;}}
+        
+    </style>
+</head>
+<body>
+    <h1>Colores RGb, al pasar el ratón por encima, muestran el color complementario</h1>
+    <article>
+        <div>
+            <span class="visible">Color rojo #FF0000</span>
+            <span class="hide">Color cyan #00FFFF</span>
+        </div>
+        <div>
+            <span class="visible">Color verde #FF0000</span>
+            <span class="hide">Color violeta #FF00FF</span>
+        </div>
+        <div>
+            <span class="visible">Color azul #0000FF</span>
+            <span class="hide">Color amarillo #FFFF00</span>
+        </div>
+    </article>
+</body>
+</html>
