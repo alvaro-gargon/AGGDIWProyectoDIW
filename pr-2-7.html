@@ -5,7 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pr-2-7</title>
     <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+            margin: 0px;
+        }
+        body{
+            background-color: #e9967a;
+        }
+        .container{
+            position: relative;
+            width: 100vw; height: 100vh;
+            & header{
+                position: fixed;
+                top: 0;
+                width: 100%;height: 12vh;
+                & p{
+                    width: 33.33%;height: 100%;
+                    position: absolute;
+                    line-height: 12vh;
+                    text-align: center;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                }
+                & p:nth-child(1){
+                    background-color: #336655;
+                }
+                & p:nth-child(2){
+                    background-color: #5f9ea0;
+                    left: 33.33%;
+                }
+                & p:nth-child(3){
+                    background-color: #663355;
+                    left: 66.66%;
+                }
+            } /* header*/
+            .wrapper{
+                position: relative;
+                top: 12vh;
+                background-color: #e9967a;
+                & nav, main, aside{
+                    position: absolute;
+                }
+                & nav{
+                    width: 20%;height: 78vh;
+                    background-color: #228899;
+                    & ul{
+                        list-style: none;
+                        width: 100%;
+                        & li{
+                            width: 100%; height: 32px;
+                            border-bottom: 1px solid maroon;
+                        }
+                        & a{
+                            display: block;
+                            line-height: 32px;padding-left: 10px;
+                            text-decoration: none;
+                            color: white; font-weight: 900;
+                            
+                        }
+                    }
+                }/*nav*/
+                & main{
+                    width: 60vw;height: 78vh;
+                    left: 20vw;
+                    & article{
+                        position: relative;
+                        padding: 10px;
+                        & *{
+                            position: absolute;
+                        }
+                        & img{
+                            display: block;
+                            max-width: 100%;
+                        }
+                    }
+                    & article:nth-child(1),article:nth-child(3){
+                        height: 30%;
+                        background-color: #87ceeb;
+                        & p{
+                            top: 50%;width: 50%;
+                        }
+                        & img{
+                            right: 20px;
+                            top: 40%;
+                        }
 
+                    }
+                    & article:nth-child(2){
+                        height: 40%;
+                        background-color: #7fffd4;
+                        & img{
+                            top: 40%;
+                            right: 20px;
+                        }
+                        & p{
+                            top: 50%;width: 50%;
+                        }
+                        & h2{
+                            width: 100%;
+                            text-align: center;
+                        }
+                        & h3{
+                            width: 100%;
+                            text-align: center;
+                            top: 60px;
+                        }
+                        & span{
+                            top: 82%;
+                            right: 50px;
+                        }
+                    }
+                    /* & article:nth-child(3){
+                        
+                    } */
+                }
+                & aside{
+                    left: 80vw;height: 78vh;width: 20vw;
+                    background-color: #ff4500;
+                    padding: 10px;
+                }
+            }
+        }
+        footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;height: 10vh;
+            background-color: #cae91e;
+            text-align: center;
+            
+        }
     </style>
 </head>
 <body>
@@ -16,13 +145,43 @@
             <p>&#x1f464 Cuenta,&#x1f6d2 cesta</p>
         </header>
         <div class="wrapper">
-            <ul>
-                <li><a href="#">opcion 1</a></li>
-                <li><a href="#">opcion 2</a></li>
-                <li><a href="#">opcion 3</a></li>
-                <li><a href="#">opcion 4</a></li>
-            </ul>
-        </div>
+            <nav>
+                <ul>
+                    <li><a href="#">opcion 1</a></li>
+                    <li><a href="#">opcion 2</a></li>
+                    <li><a href="#">opcion 3</a></li>
+                    <li><a href="#">opcion 4</a></li>
+                </ul>
+            </nav>
+            <main>
+                <article>
+                    <h2>Mi articulo 1</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus expedita accusamus nostrum sunt quisquam asperiores officia nulla nam ducimus distinctio, ipsam, cumque doloribus id doloremque consectetur maiores nesciunt laboriosam inventore!</p>
+                    <img src="http://picsum.photos/id/200/100/100" alt="">
+                </article>
+                <article>
+                    <h2>Mi articulo < 2 ></h2>
+                    <h3>Subtitulo 2 articulo</h3>
+                    <p>Tempore ipsa delectus deserunt laboriosam quaerat asperiores ipsum, officia ea iste ut accusantium totam assumenda illum est possimus doloremque fuga. Officiis quod iusto sit veniam, voluptate tempora nesciunt illo earum?</p>
+                    <img src="http://picsum.photos/id/201/100/100" alt="">
+                    <span>Links</span>
+                </article>
+                <article>
+                    <h2>Mi articulo 3</h2>
+                    <p>Deleniti, iusto omnis ratione officia beatae id aut sunt, quaerat saepe modi porro impedit architecto, commodi repellat unde illo odit incidunt sequi sint debitis? Perspiciatis fugiat provident sapiente ex facilis!</p>
+                    <img src="http://picsum.photos/id/202/100/100" alt="">
+                </article>
+            </main>
+            <aside>
+                <p>Nuestra seccion de links interesantes</p>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                ...
+            </aside>
+        </div><!--wrapper -->
+        <footer>
+            <p>Diseño de interfaces web</p>
+        </footer>
     </div>
 </body>
 </html>
