@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR-2-7-b</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            position: relative;
+            width: 600px;height: 500px;
+            background-color: grey;
+        }
+        .box{
+            position: absolute;
+            width: 350px;height: 270px;
+        }
+        .box5{
+            position: static;
+            background-color: #8cd796;
+            padding: 10px;
+        }
+        .box1{
+            padding: 10px;
+            right: 0;
+            z-index: 1;
+            background-color: red;
+        }
+        .box2{
+            padding: 10px;
+            top: 110px;
+            left: 112px;
+            z-index: 2;
+            background-color: yellow;
+        }
+        .box3{
+            right: 0;bottom: 0;
+            z-index: 1;
+            text-align: end;
+            padding: 10px;
+            background-color: blue;
+        }
+        .box4{
+            left: 0;bottom: 0;
+            z-index: 1;
+            padding: 10px;
+            background-color: blueviolet;
+        }
+        p{
+            background-color: blue;
+            z-index: 100;
+        }
+        .box:hover{
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2
+            <!-- <p>parrafo</p> -->
+        </div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+</body>
+</html>
