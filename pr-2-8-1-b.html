@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container{
+            position: relative;
+        }
+
+        input{
+            display: none;
+        }
+
+        label{
+            position: relative;
+            display: inline-block;
+            margin-right: 12px;
+            width: 96px;height: 48px;
+            line-height: 48px;
+            text-align: center;
+            border-radius: 10px 10px 0px 0px;
+            background-color: #6c78bb;
+            color: white;
+        }
+
+        article{
+            position: absolute;
+            width: 600px;height: 400px;
+            padding: 10px;
+            background-color: bisque;
+        }
+        article:nth-of-type(1){
+            z-index: 1;
+        }
+
+        input:checked + label{
+            background-color: lightblue;
+        }
+
+        input:checked + label + article{
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="radio" name="button" id="button1" value="1" checked>
+        <label for="button1">Radio 1</label>
+        <article>Este es el contenido del Radio 1</article>
+        <input type="radio" name="button" id="button2" value="2">
+        <label for="button2">Radio 2</label>
+        <article>Este es el contenido del Radio 2</article>
+        <input type="radio" name="button" id="button3" value="3">
+        <label for="button3">Radio 3</label> 
+        <article>Este es el contenido del Radio 3</article>
+        <input type="radio" name="button" id="button4" value="4">
+        <label for="button4">Radio 4</label>
+        <article>Este es el contenido del Radio 4</article>
+        <input type="radio" name="button" id="button5" value="5">
+        <label for="button5">Radio 5</label>
+        <article>Este es el contenido del Radio 5</article>
+    </div>
+</body>
+</html>
