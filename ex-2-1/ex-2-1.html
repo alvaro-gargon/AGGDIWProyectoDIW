@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            padding: 20px;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+        }
+        .container{
+            width: 100vw;height: 100vh;
+            background-color: #a0dccd;
+            
+        }
+        article{
+            position: absolute;
+            left: 120px;
+            display: inline-block;
+            width: 180px;height: 300px;
+            margin-right: 1px;
+            border-radius: 5px;
+            
+        }
+        article:nth-of-type(1){
+            margin-left: 30px;
+            background-image: url(images/apple-watch-6.jfif);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        article:nth-of-type(2){
+            left: 345px;
+            background-image: url(images/samsungGalaxyWatchActive2.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        article:nth-of-type(3){
+            left: 540px;
+            background-image: url(images/reloj.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            & .iconosInfo img{
+            position: relative;
+            bottom: -37px;
+            }
+        }
+        .priceEuros{
+            position: relative;
+            left: 8px;
+            top: -6px;
+            color: black;
+            font-weight: bold;
+            z-index: 2;
+            /* background-image: url(images/boton_amarillo.png);
+            background-size: contain;
+            background-position: -40px;
+            background-repeat: no-repeat; */
+        }
+        .priceArticle{
+            height: 20px;
+        }
+        .priceArticle img{
+            margin: 0;
+            width: 80px;height: 27px;
+            position: relative;
+            top: -29px;
+        }
+        .card_imgArticle{
+            height: 60%;
+            
+            
+        }
+        .card_infoArticle{
+            position: relative;
+            top: -9px;
+            height: 40%;
+            background-color: #b9b9b9;
+            color: #4c8e52;
+            font-size: 0.9rem;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .iconos{
+            padding: 10px;
+            position: relative;
+            top: 90px;
+             display: none;
+        }
+        .card_imgArticle:hover{
+            transition: all 0.5s ease-in;
+            .iconos{
+                display: inline;
+                left: 0px;
+            }
+        }
+        .iconos img, .iconosInfo img{
+            width: 16%;height: 16%;
+        }
+        .iconosInfo img{
+            position: relative;
+            bottom: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LISTADO DE ARTÍCULOS</h1>
+    <!--article 1 -->
+        <article class="card">
+            <section class="card_imgArticle">
+                <div class="iconos">
+                    <img src="images/vista-previa.png" alt="">
+                    <img src="images/listadeseo.png" alt="">
+                    <img src="images/comparador.png" alt="">
+                    <img src="images/configurador.png" alt="">
+                    <img src="images/carro.png" alt="">
+                </div>
+            </section>
+            <section class="card_infoArticle">
+                <div class="priceArticle">
+                    <p class="priceEuros">229,99€</p>
+                    <img src="images/boton_amarillo.png" alt="boton_amarillo">
+                </div>
+                <p class="descripArticle">Apple Watch Series 6 (GPS, 44MM) Caja de Aluminio Plata con Correa Deportiva</p>
+                <div class="iconosInfo">
+                    <img src="images/novedad.png" alt="">
+                    <img src="images/topventas.png" alt="">
+                    <img src=" " alt="">
+                    <img src=" " alt="">
+                    <img src="images/stock-3.png" alt="">
+                </div>
+            </section>
+        </article>
+        <!-- fin article 1 -->
+        <!--article 2 -->
+        <article class="card">
+            <section class="card_imgArticle">
+                <div class="iconos">
+                    <img src="images/vista-previa.png" alt="">
+                    <img src="images/listadeseo.png" alt="">
+                    <img src="images/comparador.png" alt="">
+                    <img src="images/configurador.png" alt="">
+                    <img src="images/carro-gris.png" alt="">
+                </div>
+            </section>
+            <section class="card_infoArticle">
+                <div class="priceArticle">
+                    <p class="priceEuros">113,99€</p>
+                    <img src="images/boton_amarillo.png" alt="boton_amarillo">
+                </div>
+                <p class="descripArticle"> Galaxy Watch Active2 SM-R830 - Smartwatch Bluetooth, Oro Rosa, 40mm</p>
+                <div class="iconosInfo">
+                    <img src="images/novedad.png" alt="">
+                    <img src="images/topventas.png" alt="">
+                    <img src=" " alt="">
+                    <img src=" " alt="">
+                    <img src="images/stock-1.png" alt="">
+                </div>
+            </section>
+        </article>
+        <!--fin article 2 -->
+        <!--article 3 -->
+        <article class="card">
+            <section class="card_imgArticle">
+                <div class="iconos">
+                    <img src="images/vista-previa.png" alt="">
+                    <img src="images/listadeseo.png" alt="">
+                    <img src="images/comparador.png" alt="">
+                    <img src="images/configurador.png" alt="">
+                    <img src="images/carro.png" alt="">
+                </div>
+            </section>
+            <section class="card_infoArticle">
+                <div class="priceArticle">
+                    <p class="priceEuros">85,99€</p>
+                    <img src="images/boton_amarillo.png" alt="boton_amarillo">
+                </div>
+                <p class="descripArticle">Reloj de cuerzo con correa de tela informal... </p>
+                <div class="iconosInfo">
+                    <img src="images/novedad.png" alt="">
+                    <img src="images/topventas.png" alt="">
+                    <img src=" " alt="">
+                    <img src=" " alt="">
+                    <img src="images/stock-3.png" alt="">
+                </div>
+            </section>
+        </article>
+    </div>
+</body>
+</html>
