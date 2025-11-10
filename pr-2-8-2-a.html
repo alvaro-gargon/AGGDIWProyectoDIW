@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;
+        margin: 0;}
+        .container{
+            position: relative;
+            width: 700px;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            padding-left: 10px;
+            width: 100%;height: 48px;
+            line-height: 48px;
+            background-color: #dddddd;
+            border-bottom: 1px solid #bbb;
+        }
+        p{
+            padding: 10px;
+            background-color: #eeeeee;
+            display: none;
+        }
+        p:target{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Acordeon con :target</h1>
+
+        <a href="#p1">Titulo 1</a>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsa dolor maiores cumque asperiores numquam soluta cum ipsam placeat voluptatum a nobis, expedita sapiente non impedit repellat? Tempore, quis quia!</p>
+        <a href="#p2">Titulo 2</a>
+        <p id="p2">Nemo, labore. Dicta inventore et, id quod neque optio ab repellat nam eveniet voluptates fugit labore dolore maiores autem fugiat, officia obcaecati possimus iure tempore earum eum aperiam minus quis?</p>
+        <a href="#p3">Titulo 3</a>
+        <p id="p3">Reiciendis, impedit perspiciatis recusandae odio eius necessitatibus, blanditiis quas distinctio commodi earum porro aliquid similique dignissimos delectus modi possimus ullam praesentium adipisci ex? Aliquid tempore eaque placeat itaque consequuntur illo.</p>
+        <a href="#p4">Titulo 4</a>
+        <p id="p4">Explicabo libero, eius reiciendis labore quasi tempore numquam consequuntur quos. Optio officia saepe, doloribus minima id laudantium odio tenetur dolores tempore a blanditiis repudiandae ut, illo nemo! Fuga, commodi earum.</p>
+    </div>
+</body>
+</html>
