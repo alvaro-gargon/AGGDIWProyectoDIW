@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            position: relative;
+            width: 100vw;height: 98vh;
+            background-color: #3c465a;
+            border: 0.1px solid transparent;
+        }
+        nav{
+            position: relative;
+            width: 99vw;height: 70px;
+            background-color: #4b7373;
+            margin: 5px;
+            border: 1px solid white;
+        }
+        nav label{
+            position: relative;
+            display: block;
+            width: 56px;height: 56px;
+            top: 7px;left: 7px;
+            border-radius: 5px;
+            background-color: #787878;
+            & span{
+                position: relative;
+                left: 3px;
+                display: block;
+                width: 50px;height: 4px;
+                background-color: white;
+            }
+            & span:nth-child(1){
+                top: 11px;
+            }
+            & span:nth-child(2){
+                top: 26px;
+            }
+            & span:nth-child(3){
+                top: 41px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <label for="btnOpen">
+                <span></span><span></span><span></span>
+            </label>
+        </nav>
+        <input type="radio" name="btns" id="btnOpen">
+
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Alumnos</a></li>
+            <li><a href="#">Secretaria</a></li>
+            <li><a href="#">Profesorado</a></li>
+        </ul>
+    </div>
+</body>
+</html>
