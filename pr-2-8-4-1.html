@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .container{
+            width: 600px;height: 500px;
+            background-color: #e182f0;
+            position: relative;
+        }
+        .btn{
+            position: relative;
+            width: 128px;height: 48px;
+            background-color: black;
+            margin: auto;
+            top: calc(500px/3 - 48px);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 48px;
+            text-align: center;
+        }
+        .btn2{
+            top: 300px;
+        }
+        .btn1::before, .btn1::after{
+            content:"";
+            position: absolute;
+            width: 0%;height: 5px;
+            background-color: white;
+            bottom: 0;
+            transition: all 0.5s ease;
+        }
+        .btn1::before{
+            left: 50%;
+        }
+        .btn1::after{
+            right: 50%;
+        }
+        .btn1:hover::before,.btn1:hover::after{
+            width: 50%;
+        }
+        .btn2::before, .btn2::after{
+            content:"";
+            position: absolute;
+            width: 5px;height: 0px;
+            background-color: white;
+            bottom: 0;
+            transition: all 0.5s ease; /*para hacer que que la barra aparezca verticalmente, hay que modificar los valores del height */
+            bottom: 0; /* con esto hago que venga de abajo a arriba */
+        }
+        .btn2::before{
+            left: 0%;
+        }
+        .btn2::after{
+            right: 0%;
+        }
+        .btn2:hover::before,.btn2:hover::after{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btn btn1">BOTON 1</div>
+        <div class="btn btn2">BOTON 2</div>
+    </div>
+</body>
+</html>
