@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            position: relative;
+            width: 600px;height: 600px;
+            padding-left: 50px;
+            background-color: #ccc;
+        }
+        .ball{
+            position: absolute;
+            top: 50%;left: 50%;
+            translate: -50% -50%;
+            width: 300px;height: 300px;
+            border-radius: 50%;
+            background-image: radial-gradient(circle at 0% 0%, rgba(255, 255, 0, 1) 25%, rgba(0, 0, 255, 1) 75%);
+            /*https://cssgenerator.pl/en/gradient-generator/*/
+            
+        }
+        .ball::after{
+            content: "";
+            position: absolute;
+            width: 50%;height: 5px;
+            background-color: rgba(0, 0, 255, 0.911);
+            box-shadow: 5px -5px 8px 9px rgba(0, 50, 255);
+            bottom: 0px;left: 50%;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
