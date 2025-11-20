@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        .container{
+            position: relative;
+            margin-top: 100px;
+        }
+        .caja{
+            position: relative;
+            width: 400px;height: 250px;
+            background-color: #d89a43;
+        }
+        .caja *{
+            position: absolute;
+            display: inline-block;
+        }
+        img{
+            top: 50%;left: 50%;
+            translate: -50% -50%;
+        }
+        h2{
+            margin-left: 50px;
+        }
+        p{
+            right: 100px;
+        }
+        .caja::before, .caja::after{
+            content: "";
+            position: absolute;
+            border: 25px solid transparent;
+            
+        }
+        .caja::before{
+            border-top: 25px solid #6a5acd;
+            bottom: -50px;left: 20px;
+        }
+        .caja::after{
+            border: 50px solid transparent;
+            border-bottom: 50px solid #fa8072;
+            top:-100px;right: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caja">
+            <h2>Caja</h2>
+            <p>Parrafo</p>
+            <img src="http://picsum.photos/100/100" alt="">
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -11,23 +11,32 @@
         .container{
             position: relative;
             width: 600px;height: 600px;
+            z-index: 0;
             padding-left: 50px;
             background-color: #ccc;
         }
         .ball{
-            position: absolute;
+            position: relative;
+            z-index: 1;
+            translate:-50%,-50%;
             top: 50%;left: 50%;
-            translate: -50% -50%;
             width: 300px;height: 300px;
             border-radius: 50%;
-            background-image: radial-gradient(circle at 0% 0%, rgba(255, 255, 0, 1) 25%, rgba(0, 0, 255, 1) 75%);
             /*https://cssgenerator.pl/en/gradient-generator/*/
             
         }
-        .ball::after{
+        /* creo un hijo de ball porque al usar translate crea un nuevo contexto de apilamiento */
+        .ball2{
+            position: absolute;
+            top: 0;left: 0;
+            width: 300px;height: 300px;
+            border-radius: 50%;
+            background-image: radial-gradient(circle at 0% 0%, rgba(255, 255, 0, 1) 25%, rgba(0, 0, 255, 1) 75%);
+        }
+        .ball2::after{
             content: "";
             position: absolute;
-            width: 50%;height: 5px;
+            width: 60%;height: 5px;
             background-color: rgba(0, 0, 255, 0.911);
             box-shadow: 5px -5px 8px 9px rgba(0, 50, 255);
             bottom: 0px;left: 50%;
@@ -38,7 +47,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="ball"></div>
+        <div class="ball">
+            <div class="ball2"></div>
+        </div>
     </div>
 </body>
 </html>
