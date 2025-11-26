@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --mg:15px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width:calc(100-vw - var(--mg));
+            margin: auto;
+            height: 100vh;
+            background-color: #818181;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            gap: 5px;
+            *{
+                border-radius: 5px;
+            }
+        }
+        header{
+            
+            background-color: #adfb95;
+            flex:0 12vh;
+            padding: 5px;
+            display: flex; /*este se añade porque lo necesitan los hijos, ya que flex solo se transmite a los hijos y no a los nietos */
+            justify-content: space-between;
+            align-items: center;
+            /* flex-direction: column; */
+            & input{
+                height: 48px;
+            }
+            & img{
+                flex:0 100px;
+            }
+            & div{
+                flex: 0 100px;
+                height: 100px;
+                background-color: #5eb8b8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .wrapper{
+            flex: 76vh;width: 100%;
+            display: flex;
+            flex-flow: row;
+            & nav{
+                background-color: #ee7f54;
+                flex:  20%;height: 100%;
+            }
+            & main{
+                flex: 80%;height: 100%;
+                background-color: #ca1341;
+                padding: 4px;
+                display: flex;
+                justify-content: space-between;
+                & article{
+                    width: 32px;height: 32px;
+                    border-radius: 50%;
+                    background-color: black;
+                }
+                & article:nth-child(2){
+                    align-self: center;
+                }
+                & article:nth-child(3){
+                    align-self: flex-end;
+                }
+                
+            }
+            & aside{
+                flex: 20%;height: 100%;;
+                background-color: #f6d702;
+            }
+        }
+        footer{
+            flex: 12%;
+            background-color: #d4a0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="http://picsum.photos/id/350/100/100" alt="">
+            <input type="search" name="" id="" placeholder="search...">
+            <img src="http://picsum.photos/id/351/100/100" alt="">
+            <div>
+                header
+            </div>
+        </header>
+        <div class="wrapper">
+            <nav>nav</nav>
+            <main>
+                <article></article>
+                <article></article>
+                <article></article>
+
+            </main>
+            <aside>aside</aside>
+        </div>
+        <!--wrapper -->
+        <footer>
+            footer
+        </footer>
+    </div>
+    <!--container -->
+</body>
+</html>

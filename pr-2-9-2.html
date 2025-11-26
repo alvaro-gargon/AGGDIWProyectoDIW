@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --mg:10px;
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .container{
+            width: calc(100vw - var(--mg)*2);
+            height: 100vh;
+            margin: 0 auto;    
+            background-color: darkorchid;
+            display: flex;
+            flex-direction: column;
+            & *{
+                text-align: center;
+            }
+        }
+        header{
+            flex:15vh;
+            background-color: #aabbcc;
+        }
+        main{
+            flex: 85vh;
+            display: flex;
+            flex-direction: column;
+            & nav{
+                flex: 10%;
+                background-color: #bbbb11;
+            }
+            & section{
+                flex: 75%;
+                background-color: #aaffff;
+            }
+            & aside{
+                flex: 15%;
+                background-color: #deb887;
+            }
+        }
+        footer{
+            flex: 10vh;
+            background-color: #fa8072;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Encabezado</header>
+        <main>
+            <nav>Menu</nav>
+            <section>Contenido principal</section>
+            <aside>Barra lateral de publicidad</aside>
+        </main>
+        <footer>Pie de página</footer>
+    </div>
+</body>
+</html>
