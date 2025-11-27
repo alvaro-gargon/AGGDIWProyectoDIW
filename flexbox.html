@@ -9,15 +9,34 @@
             box-sizing: border-box;
         }
         .container{
-            width: 450px;height: 450px;
+            width: 600px;height: 400px;
             background-color: gainsboro;
             display: flex;
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+            flex-flow: column wrap;
+            gap: 5px 10px; /* el primero es espacion entre filas y columnas*/
+            justify-content: space-around;
+            align-content: center;
         }
         div{
-            width: 100px;height: 100px;
+            width: 100px;
+            height: 100px;
+            /* flex-shrink: 1; */
+            /* flex-basis: 110px; tiene prioridad sobre width si flex direction es row o sobre height si flex direction es column*/
+            /* flex-grow: 0; */
+            flex: 0 1 110px;
             background-color: darkgreen;
             /* margin-bottom: 5px; */
             border: 1px solid black;
+        }
+        .div6{
+            /* order: 1; */
+            background-color: darkgoldenrod;
+            flex-grow: 6;
+        }
+        .div10{
+            align-self: flex-end;
         }
     </style>
 </head>
