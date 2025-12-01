@@ -1,0 +1,59 @@
+<body>
+  <div class="container">
+    
+        <input type="radio" name="rd" id="open">
+        <input type="radio" name="rd" id="close">
+        <input type="radio" name="rd2" id="openApv">
+        <input type="radio" name="rd2" id="closeApv">  
+   
+        <div class="row1">  
+          PRUEBA PRÁCTICA - DISEÑO DE INTERFACES WEB - 2º DAW
+        </div> 
+    
+        <div class="row2">  
+          <label for="open" id="lblOpen">
+                  <img src="botonAmazon.png" alt=""></label> 
+        </div>
+
+
+        <nav class="menuP" id="menuP">
+        
+                    <span class="hola"> &#9937; Hola, Alumn@</span> 
+                    <span class="tit">Tendencias</span>
+                    <a href="#">Los mas vendidos</a>
+                    <a href="#">Últimas novedades</a>
+                    <a href="#">Productos del momento</a>
+                    <span class="tit">Contenido y Dispositivos Digitales</span>   
+
+                    <label for="openApv" id="lblopenApv"> 
+                           Amazon Prime Video  <span class="rght">&#10095;</span>
+                    </label>                                              
+                        <a href="#">Amazon Music </a>
+                        <a href="#">Amazon Photos</a>
+                        <a href="#">Echo y Alexa</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+                         <a href="#">..........</a>
+        
+                    <div class="menuApv">
+                          <label for="closeApv" id="lblcloseApv">&#129144; &nbsp; MENU PRINCIPAL</label> 
+                          <span class="tit">Amazon prime video</span> 
+                          <a href="#">Todos los videos</a>                     
+                          <a href="#">Caegorias</a>
+                          <a href="#">Mi espacio</a> 
+                    </div>
+         </nav>
+
+         <label for="close" id="lblClose">    </label>
+
+  </div>    <!-- container -->
+</body>
