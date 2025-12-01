@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;height: 100vh;
+        }
+        .uno{
+            width: 400px;height: 300px;
+            background-color: #dcc8c8;
+            display: flex;
+            align-items: flex-end;
+            gap: 5px;
+            & article{
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;height: 95%;
+                background-color: purple;
+            }
+            & article:nth-child(2){
+                height: 70%;
+            }
+            & article:nth-child(3){
+                height: 50%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="uno">
+            <article>1</article>
+            <article>2</article>
+            <article>3</article>
+        </div>
+    </div>
+</body>
+</html>
