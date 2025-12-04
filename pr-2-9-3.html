@@ -9,7 +9,8 @@
             box-sizing: border-box;
         }
         .container{
-            width: 100vw;height: 100vh;
+            width: 100vw;height: auto;
+            margin-bottom: 50px;
         }
         .uno{
             width: 400px;height: 300px;
@@ -33,6 +34,81 @@
             }
 
         }
+
+
+        .dados{
+            width: 600px;height: 500px;
+            background-color: greenyellow;
+            display: flex;flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 10px;
+            align-content: space-around;
+            margin-bottom: 50px;
+        }
+        .dado{
+            width: 150px;height: 150px;
+            background-color: red;
+            border-radius: 5px;
+            padding: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            & article{
+                width: 40px;height: 40px;
+                background-color: black;
+                border-radius: 50%;
+            }
+        }
+        .dado:nth-child(1){
+            justify-content: center;
+            align-items: center;
+        }
+        .dado:nth-child(2){
+            justify-content: space-between;
+            & article:last-child{align-self: flex-end;}
+        }
+        .dado:nth-child(3){
+            justify-content: space-between;
+            align-items: center;
+            & article:first-child{align-self: flex-start;}
+            & article:last-child{align-self: flex-end;}
+        }
+        .dado:nth-child(4){
+            justify-content: space-between;
+            column-gap: 20px;
+            align-content: space-between;
+        }
+        .dado:nth-child(5){
+            justify-content: space-between;
+            align-content: space-between;
+            & article:nth-child(2){margin-top: 50px;}
+        }
+        .dado:nth-child(6){
+            justify-content: space-between;
+            column-gap: 20px;
+            align-content: space-between;
+        }
+
+
+        nav{
+            width: 550px;height: 100px;
+            display: flex;
+            & a{
+                text-decoration: none;
+                font-family: sans-serif;
+                flex: 25%;
+                color: white;
+                rotate: -90deg;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            & a:nth-child(1){background-color: green;}
+            & a:nth-child(2){background-color: #f1a500;}
+            & a:nth-child(3){background-color: #5882b5;}
+            & a:nth-child(4){background-color: #770282;}
+        }
+
+
     </style>
 </head>
 <body>
@@ -43,5 +119,51 @@
             <article>3</article>
         </div>
     </div>
+    <main class="dados">
+        <div class="dado">
+            <article></article>
+            
+        </div>
+        <div class="dado">
+            <article></article>
+            <article></article>
+            
+        </div>
+        <div class="dado">
+            <article></article>
+            <article></article>
+            <article></article>
+            
+        </div>
+        <div class="dado">
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            
+        </div>
+        <div class="dado">
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            
+        </div>
+        <div class="dado">
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+        </div>
+    </main>
+    <nav>
+        <a href="#">Centro</a>
+        <a href="#">Profesores</a>
+        <a href="#">Asignaturas</a>
+        <a href="#">Cursos</a>
+    </nav>
 </body>
 </html>
