@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Verdana, sans-serif;
+            font-weight: bold;
+        }
+        nav{
+            width: 100vw;
+            background-color: #5a5a87;
+            display: flex;
+            align-items: center;
+        }
+        a{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+        }
+        @media (max-width:576px){
+            a:hover{
+                background-color: #96cdeb;
+            }
+            nav{
+                flex-flow: column;
+                align-items: center;
+                flex:0 0 350px;
+                & a{
+                    border-bottom: 1px solid #ccc;
+                    height: 56px;width:100%;
+                }
+                & a:nth-child(1){
+                    order: 1;
+                }
+            }
+        }
+        @media (min-width:577px) and (max-width:768px){
+            nav{
+                height: 64px;
+                justify-content: space-around;
+                & a:first-child{
+                    display: none;
+                }
+            }
+        }
+        @media (min-width:769px){
+            nav{
+                height: 64px;
+                justify-content: flex-end;
+                & a{
+                    flex: 0 128px;
+                }
+                & a:first-child{
+                    flex: 0 32px;
+                    margin-right: auto;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">&#10017</a>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</body>
+</html>
