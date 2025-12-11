@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-weight: 900;
+            --mgn:10px;
+        }
+        .container{
+            width: calc(95vw - var(--mgn)*2);
+            margin: auto;
+        }
+        .tabla1{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-flow: row wrap;
+            & section{
+                width: 25%;height: 48px;
+                border: 1px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            & section:nth-child(-n+4){
+                background-color: purple;
+            }
+            & section:nth-child(n+5):nth-child(even){
+                background-color: #c8b482;
+            }
+            & section:nth-child(n+5):nth-child(odd){
+                background-color: aqua;
+            }
+        }
+        .tabla2{
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            margin-top: 40px;
+            & section{
+                height: 48px;
+                border: 1px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            & section:nth-child(-n+4){
+                background-color: #aacd00;
+                flex: 25%;
+            }
+            & section:nth-child(-n+7):nth-child(n+5){
+                background-color: #c8b482;
+                flex: 25%;
+            }
+            & section:nth-child(-n+7):nth-child(6){
+                flex: 50%;
+            }
+            & section:nth-child(-n+12):nth-child(n+8){
+                background-color: cyan;
+                flex: 25%;
+            }
+            & section:nth-child(-n+11):nth-child(n+9){
+                background-color: cyan;
+                flex: 16.6%;
+            }
+            & section:nth-child(-n+17):nth-child(n+13){
+                flex: 5%;
+            }
+            & section:nth-child(-n+20):nth-child(18){
+                flex: 50%;
+            }
+            & section:nth-child(-n+20):nth-child(n+19){
+                flex: 12.5%;
+            }
+            & section:nth-child(-n+20):nth-child(n+13){
+                background-color: #c3691e;
+            }
+            & section:nth-child(-n+28):nth-child(n+21){
+                background-color: #be2ddc;
+            }
+            & section:nth-child(-n+24):nth-child(n+21){
+                flex: 5%;
+            }
+            & section:nth-child(-n+28):nth-child(25){
+                flex: 10%;
+            }
+            & section:nth-child(-n+28):nth-child(26){
+                flex: 40%;
+            }
+            & section:nth-child(-n+28):nth-child(n+27){
+                flex: 15%;
+            }
+            /* Darse cuenta de que, en un ejemplo como el de arriba, recorre desde el 27 al 28 */
+            /* Y en las que son 3 nth-child con n, recorre las dos ultimas */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabla1">
+            <section>1</section>
+            <section>2</section>
+            <section>3</section>
+            <section>4</section>
+            <section>5</section>
+            <section>6</section>
+            <section>7</section>
+            <section>8</section>
+            <section>9</section>
+            <section>10</section>
+            <section>11</section>
+            <section>12</section>
+            <section>13</section>
+            <section>14</section>
+            <section>15</section>
+            <section>16</section>
+        </div>
+        <div class="tabla2">
+            <section>1</section>
+            <section>2</section>
+            <section>3</section>
+            <section>4</section>
+            <section>5</section>
+            <section>6</section>
+            <section>7</section>
+            <section>8</section>
+            <section>9</section>
+            <section>10</section>
+            <section>11</section>
+            <section>12</section>
+            <section>13</section>
+            <section>14</section>
+            <section>15</section>
+            <section>16</section>
+            <section>17</section>
+            <section>18</section>
+            <section>19</section>
+            <section>20</section>
+            <section>21</section>
+            <section>22</section>
+            <section>23</section>
+            <section>24</section>
+            <section>25</section>
+            <section>26</section>
+            <section>27</section>
+            <section>28</section>
+        </div>
+    </div>
+</body>
+</html>

@@ -95,12 +95,25 @@
             & a{
                 text-decoration: none;
                 font-family: sans-serif;
-                flex: 25%;
+                flex:25%;
                 color: white;
-                rotate: -90deg;
+                flex: 1;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                transition: all 0.5s ease;
+            }
+            & a >span{
+                rotate: -90deg;
+                transition: all 0.5s ease;
+            }
+            & a:hover span{
+                rotate: 0deg;
+                
+            }
+            & a:hover{
+                flex: 6;
+                
             }
             & a:nth-child(1){background-color: green;}
             & a:nth-child(2){background-color: #f1a500;}
@@ -160,10 +173,10 @@
         </div>
     </main>
     <nav>
-        <a href="#">Centro</a>
-        <a href="#">Profesores</a>
-        <a href="#">Asignaturas</a>
-        <a href="#">Cursos</a>
+        <a href="#"><span>Centro</span></a>
+        <a href="#"><span>Profesores</span></a>
+        <a href="#"><span>Asignaturas</span></a>
+        <a href="#"><span>Cursos</span></a>
     </nav>
 </body>
 </html>
