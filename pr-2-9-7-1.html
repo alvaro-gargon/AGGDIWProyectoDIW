@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        img{
+            max-width: 100%;
+            display: block;
+        }
+        .container{
+            position: relative;
+            width: 95%;height: 95vh;
+            background-color: #fae1c3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .caroussel{
+            position: relative;
+            width: 600px;height: 400px;
+            background-color: yellow;
+            
+        }
+        .photos{
+            display: flex;
+            transition: all 0.5s ease-in-out;
+        }
+        input{
+            position: absolute;
+            bottom: 20px;
+            width: 40px;height: 40px;
+            background-color: pink;
+            z-index: 1;
+        }
+        input::after{
+            content: "";
+            position: absolute;
+            width: 40px;height: 40px;
+            left: 0;top: 0;
+            background-color: pink;
+            border-radius: 50%;
+        }
+        #rd1{
+            left: 75px;
+        }
+        #rd2{
+            left: 175px;
+        }
+        #rd3{
+            left: 275px;
+        }
+        #rd4{
+            left: 375px;
+        }
+        #rd5{
+            left: 475px;
+        }
+
+        #rd1:focus-within{
+            transform: translateX(0px);
+        }
+        #rd2:focus-within ~ .photos{
+            transform: translateX(-600px);
+        }
+        #rd3:focus-within ~ .photos{
+            transform: translateX(-1200px);
+        }
+        #rd4:focus-within ~ .photos{
+            transform: translateX(-1800px);
+        }
+        #rd5:focus-within ~ .photos{
+            transform: translateX(-2400px);
+        }
+        #rd1:checked::after{
+            background-color: cyan;
+        }
+        input:focus-within::after{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caroussel">
+            <input type="radio" name="rd" id="rd1">
+            <input type="radio" name="rd" id="rd2">
+            <input type="radio" name="rd" id="rd3">
+            <input type="radio" name="rd" id="rd4">
+            <input type="radio" name="rd" id="rd5">
+
+            <div class="photos">
+                <img src="http://picsum.photos/id/400/600/400" alt="">
+                <img src="http://picsum.photos/id/402/600/400" alt="">
+                <img src="http://picsum.photos/id/403/600/400" alt="">
+                <img src="http://picsum.photos/id/404/600/400" alt="">
+                <img src="http://picsum.photos/id/405/600/400" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
