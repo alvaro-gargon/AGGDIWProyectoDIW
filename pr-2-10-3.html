@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            display: block;
+            max-width: 100%;
+        }
+        .container{
+            width: 95%;height: 100%;
+            margin: auto;
+            display: grid;
+            & .card{
+                width: 350px;height: 400px;
+                display: grid;
+                grid-template-columns: 350px;
+                grid-template-rows: 2fr 8fr;
+                & header h2{margin-bottom: 0.3rem;}
+                & p{margin-top: 0.3rem;}
+            }
+        }
+
+    </style>
+</head>
+<body>
+     <header><h1>GALERIA DE TARJETAS CON IMAGEN </h1></header>
+    <div class="container">        
+        <div class="card">
+            <header>
+                <h2>El título</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, vitae fugit, accusamus aliquid officiis veniam consequuntur.</p>
+            </header>
+            <div class="imgn">
+                 <img src="http://picsum.photos/id/350/800/915" alt="">
+            </div>
+           
+        </div>
+        <div class="card">
+            <header>
+                <h2>El título</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, vitae fugit, accusamus aliquid officiis veniam consequuntur.</p>
+            </header>
+            <div class="imgn">
+                <img src="http://picsum.photos/id/351/800/915" alt="">
+            </div>
+           
+        </div>
+        <div class="card">
+            <header>
+                <h2>El título</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, vitae fugit, accusamus aliquid officiis veniam consequuntur.</p>
+            </header>
+            <div class="imgn">
+                <img src="http://picsum.photos/id/352/800/915" alt="">
+            </div>
+           
+        </div>
+        <div class="card">
+            <header>
+                <h2>El título</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, vitae fugit, accusamus aliquid officiis veniam consequuntur.</p>
+            </header>
+            <div class="imgn">
+                 <img src="http://picsum.photos/id/353/800/915" alt="">
+            </div>
+           
+        </div>
+</body>
+</html>

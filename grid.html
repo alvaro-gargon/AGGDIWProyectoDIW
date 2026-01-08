@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            width: 600px;height: 700px;
+            background-color: paleturquoise;
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr; /* primera columna y segunda columna y etc. FR va cogiendo el espacio disponible*/
+            /* podemos usar repeat(num,tamaño), ej: grid-template-columns:repeat(8,fr) */
+            grid-template-rows: 100px 200px 300px;
+            gap: 10px;
+        }
+        article{
+            background-color: gold;
+            /* width: 150px;height: 40px; */
+        }
+        article:nth-of-type(1){
+            background-color: red;
+            /* tambien se pueden usar valores negativos, que irian en sentido contrario al que escribimos */
+            grid-column: 2/3; /* coge de la linea 1 a la linea 3 (inspeccionar) */
+            grid-row: 1/4; /* solo coge paralelogramos, es decir, cuadrados y rectangulos, no puedo hacer una L*/
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <article>caja 1</article>
+        <article>caja 2</article>
+        <article>caja 3</article>
+        <article>caja 4</article>
+        <article>caja 5</article>
+        <article>caja 6</article>
+        <article>caja 7</article>
+        <article>caja 8</article>
+        <article>caja 9</article>
+        <article>caja 10</article>
+        <article>caja 11</article>
+        <article>caja 12</article>
+    </div>
+    
+</body>
+</html>

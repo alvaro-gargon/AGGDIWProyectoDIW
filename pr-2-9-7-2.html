@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            --hght:10px;
+        }
+        img{
+            max-width: 100%;
+            display: block;
+        }
+        .container{
+            position: relative;
+            width: 95%;height: 95vh;
+            background-color: #fae1c3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .caroussel{
+            position: relative;
+            width: 600px;height: 400px;
+            background-color: aqua;
+            display: flex;
+            scroll-snap-type: x mandatory;
+            /* overflow-x: scroll; */
+            overflow: hidden;
+            anchor-name: --carousel;
+        }
+        .photo{
+            flex: 0 0 600px;
+            height: 400px;
+            scroll-snap-align: center;
+        }
+        .caroussel::scroll-button(*){
+            font-size: 2rem;
+            background-color: rgba(255, 255, 255, 0.675);
+            color: black;
+            opacity: 0.7;
+            cursor: pointer;
+            position: absolute;
+            position-anchor: --carousel;
+        }
+        .caroussel::scroll-button(left){
+            content: "<-";
+            left: anchor(left);
+            top: anchor(center);
+            /* top: calc(anchor(top)+ var(--hght)/2); */
+            /* position-area: center bottom; */
+        }
+        .caroussel::scroll-button(right){
+            content: "->";
+            right: anchor(right);
+            top: anchor(center);
+            /* top: calc(anchor(top)+var(--hght)/2); */
+        }
+        .caroussel::scroll-button(*):hover,
+        .caroussel::scroll-button(*):focus{
+            opacity: 1;
+        }
+        .caroussel::scroll-button(*):active{
+            translate: 1px 1px;
+        }
+        .caroussel::scroll-button(*):disabled{
+            opacity: 0.2;
+            cursor: unset;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caroussel">  
+            <img class="photo" src="http://picsum.photos/id/199/600/400" alt="">
+            <img class="photo" src="http://picsum.photos/id/202/600/400" alt="">
+            <img class="photo" src="http://picsum.photos/id/203/600/400" alt="">
+            <img class="photo" src="http://picsum.photos/id/204/600/400" alt="">
+            <img class="photo" src="http://picsum.photos/id/206/600/400" alt="">
+        </div>
+    </div>
+</body>
+</html>
