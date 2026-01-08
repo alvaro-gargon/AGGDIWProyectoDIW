@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR 2-10-2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 1.4rem;
+            font-weight: bold;
+            --mgn: 10px;
+        }
+        .wrapper{
+            width: calc(100dvw - var(--mgn)*2);
+            height: 100dvh;
+            margin: 0 auto;
+            display: grid;
+        }
+        .wrapper *{
+            display: grid;
+            place-items: center;
+        }
+        header{background: #aabbcc;}
+        nav{background: tomato;}
+        main{background: #004040;}
+        aside{background: greenyellow;}
+        footer{background: #546e7a;}
+        @media(width < 640px){
+            header{height: 20dvh;}
+            nav{height: 15dvh;}
+            main{height: 45dvh;}
+            aside{height: 15dvh;}
+            footer{height: 5dvh;}
+        }
+        @media(width >= 640px) and (width < 1024px){
+            .wrapper{
+                grid-template: 2fr 1fr 6fr 1fr / 8fr 2fr;
+            }
+            header{
+                grid-column: 1 / span 2;
+            }
+            nav{
+                grid-column: 1 / span 2;
+            }
+            footer{
+                grid-column: 1 / span 2;
+                grid-row: 4 / span 1;
+            }
+        }
+        @media(width >= 1024px){
+            .wrapper{
+                grid-template: 2fr 6.5fr 1.5fr / 1.5fr 6fr 2.5fr;
+            }
+            header{
+                grid-column: 1 / span 3;
+            }
+            footer{
+                grid-column: 1 / span 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <aside>aside</aside>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

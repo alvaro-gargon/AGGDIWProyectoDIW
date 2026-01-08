@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR 2-10-2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .wrapper{
+            height: 100vh;width: 95%;
+            margin: auto;
+            background-color: #f1f1f1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 5px;
+            grid-template-areas: "hd hd hd hd" 
+                                    "nv mn mn as"
+                                    "nv ft ft ft";  /*cada comillas son una fila, los . son espacions vacios. Solo funcionan paralelogramos */
+        }
+        header{
+            background-color: #d2691e;
+            grid-area: hd;
+        }
+        nav{
+            background-color: #6495ed;
+            grid-area: nv;
+        }
+        main{
+            background-color: #ff7f50;
+            grid-area: mn;
+        }
+        aside{
+            background-color: #2e8b57;
+            grid-area: as;
+        }
+        footer{
+            background-color: #c0c0c0;
+            grid-area: ft;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <aside>aside</aside>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
