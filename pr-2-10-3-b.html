@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .grid{
+            width: 98%;height: 100%;
+            margin: auto;
+            outline: 5px solid black;
+            min-width: 450px;
+        }
+        img{
+            max-width: 100%;
+            display: block;
+        }
+        header{
+            height: 150px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+            grid-template-rows: 150px;
+            & div{
+                width: 70%;height: 70%;
+                & img{
+                    
+                    height: 100%;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+        main{
+            display: grid;
+            width: 100%;height: 100%;
+            grid-template-columns: repeat(auto-fit,minmax(460px, 1fr));
+            gap: 10px;
+            & section{
+                display: grid;
+                grid-template-columns: 60% 20% 20%;
+                & article{
+                    width: 100%;
+                    align-content: center;
+                    text-align: center;
+                    & img{
+                        width: 100%;
+                    }
+                }
+                & article:nth-child(2){
+                    background-color: aqua;
+                }
+                & article:nth-child(3){
+                    background-color: #3c8787;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <header>
+            <div><img src="http://picsum.photos/id/200/600/400" ></div>
+            <div><img src="http://picsum.photos/id/201/600/400" ></div>
+            <div><img src="http://picsum.photos/id/202/600/400" ></div>
+        </header>
+        <main>
+            <section>
+                <article><img src="http://picsum.photos/id/360/600/400"></article>
+                <article>Imagen 1</article>
+                <article>Lorem ipsum</article>
+            </section>
+           
+             <section>
+                <article><img src="http://picsum.photos/id/362/600/400"></article>
+                <article>Imagen 2</article>
+                <article>Lorem ipsum</article>
+            </section>
+             <section>
+                <article><img src="http://picsum.photos/id/363/600/400"></article>
+                <article>Imagen 3</article>
+                <article>Lorem ipsum</article>
+            </section>
+             <section>
+                <article><img src="http://picsum.photos/id/364/600/400"></article>
+                <article>Imagen 4</article>
+                <article>Lorem ipsum</article>
+            </section>
+             <section>
+                <article><img src="http://picsum.photos/id/365/600/400"></article>
+                <article>Imagen 5</article>
+                <article>Lorem ipsum</article>
+            </section>
+             <section>
+                <article><img src="http://picsum.photos/id/366/600/400"></article>
+                <article>Imagen 6</article>
+                <article>Lorem ipsum</article>
+            </section>
+ 
+        </main>
+    </div>
+</body>
+</html>
