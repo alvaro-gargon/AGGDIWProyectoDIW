@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2-10-4-b</title>
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;}
+        nav{
+            width: 96%;height: 100vh;
+            margin: auto;
+            background-color: #a1a1a1;
+        }
+        ul{
+            display: grid;
+            list-style: none;
+            grid-auto-rows: 64px;
+            & li{
+                position: relative;
+                width: 100%;height: 100%;
+                background-color: olive;
+                border: 1px solid #9b0a14;
+                &:hover{
+                    background-color: palevioletred;
+                }
+                & a{
+                    display: grid;
+                    place-content: center;
+                    width: 100%;height: 100%;
+                    text-decoration: none;
+                    font-family: sans-serif;
+                    color: white;
+                    font-size: 1.2rem;
+                    
+                }
+            }
+        }
+        .menu{
+            grid-template-columns: repeat(5,1fr);
+        }
+        .sbm1,.sbm2{
+            grid-auto-flow: row;
+            /* position: absolute; */
+            width: 100%;
+            display: none;
+        }
+        .sbm2{
+            position: absolute;
+        }
+        .menu li:hover .sbm1{display: grid;}
+        .sbm1 li:hover .sbm2{
+            left: 100%;
+            top: 0;
+            display: grid;
+        }
+        .menu li:last-child .sbm1 li:hover .sbm2{
+            left: -100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Opcion 1</a></li>
+            <li><a href="#">Opcion 2</a></li>
+            <li>
+                <a href="#">Opcion 3</a>
+                <ul class="sbm1">
+                    <li><a href="#">sbm1 op31</a></li>
+                    <li>
+                        <a href="#">sbm1 op32</a>
+                        <ul class="sbm2">
+                            <li><a href="#">sbm2 op321</a></li>
+                            <li><a href="#">sbm2 op322</a></li>
+                            <li><a href="#">sbm2 op323</a></li>
+                        </ul> <!--sbm2  -->
+                    </li>
+                    <li><a href="#">sbm1 op33</a></li>
+                </ul>   <!--sbm1  -->
+               
+            </li>
+            <li><a href="#">Opcion 4</a></li>
+            <li>
+                <a href="#">Opcion 5</a>
+                <ul class="sbm1">
+                    <li><a href="#">sbm1 op51</a></li>
+                    <li>
+                        <a href="#">sbm1 op52</a>
+                        <ul class="sbm2">
+                            <li><a href="#">sbm2 op521</a></li>
+                            <li><a href="#">sbm2 op522</a></li>
+                            <li><a href="#">sbm2 op523</a></li>
+                        </ul> <!--sbm2  -->
+                    </li>
+                    <li><a href="#">sbm1 op53</a></li>
+                </ul>   <!--sbm1  -->
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
