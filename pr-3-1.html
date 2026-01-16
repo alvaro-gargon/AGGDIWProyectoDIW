@@ -7,28 +7,46 @@
     <title>Document</title>
     <style>
         *{box-sizing: border-box;font-family: sans-serif;}
+        h1{text-align: center;margin-bottom: 60px;}
         .wrapper{
-            width: 95%;
+            width: 95%;height: 100vh;
+            margin: auto;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            
         }
         .mc{
             position: relative;
-            z-index: 1;
-            width: 50%;
+            width: 45%;height: auto;
+            overflow: hidden;
+            & .img{
+                max-width: 100%;
+                display: block;
+                width: 500px;
+                aspect-ratio: 1;
+                
+            }
+            & .license{
+                position: absolute;
+                top: -100px;left: 5px;
+                transition: all 0.5s ease;
+            }
+            & .txtlc{
+                position: absolute;
+                bottom: -100px;left: 5px;
+                color: white;
+                transition: all 0.5s ease 0.5s;
+            }
+            & a{color: white;}
+            &:hover .license {
+                top: 5px;
+            }
+            &:hover .txtlc {
+                bottom: 5px;
+            }
         }
-        .img{
-            width: 100%;
-        }
-        .license{
-            position: relative;
-            bottom: 400px;
-            z-index: 2;
-        }
-        .txtlc{
-            position: relative;
-            bottom: 400px;
-            color: white;
-            z-index: 2;
-        }
+        
     </style>
 </head>
 
@@ -39,16 +57,16 @@
     <div class="wrapper">
         <div class="mc">
             <img class="img" src="images/guitarraCL.jpg">
-            <img class="license" src="images/copyleft360.png" width="100px" height="auto" alt="copyleft">
+            <img class="license" src="images/copyleft360.png" width="50px" height="auto" alt="copyleft">
             <p class="txtlc">Imagen con derechos copyleft</p>
         </div>
         <div class="mc">
             <img class="img" src="images/chestonCR.jpg" alt="copyright">
-            <img class="license" src="images/copyright640.png">
+            <img class="license" src="images/copyright640.png" width="50px">
             <p class="txtlc">Imagen con derechos copyright</p>
         </div>
         <div class="mc">
-            <img class="img" src="images/flowerCC.jpg" width="640px" alt="flower">
+            <img class="img" src="images/flowerCC.jpg" width="auto" alt="flower">
             <div class="license">
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img style="border-width:0"
                         src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
