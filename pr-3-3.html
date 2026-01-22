@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            max-width: 100%;
+            display: block;
+        }
+        .wrapper{
+            width: 95dvw;height: 95vh;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+            & div{
+                width: 200px;height: 200px;
+            }
+        }
+        .wrapper{
+            & div:nth-child(1) img{
+                border-radius: 33% 34% 28% 32% / 34% 38% 36% 38% ;
+            }
+            & div:nth-child(2) img{
+                clip-path: ellipse(26% 40% at 50% 50%);
+            }
+            & div:nth-child(3) img{
+                clip-path: url(#svgMask1);   
+            }
+            & div:nth-child(4) img{
+                clip-path: url(#svgMask2);   
+            }
+            & div:nth-child(5) img{
+                clip-path: url(#svgMask3);   
+            }
+            & div:nth-child(6) img{
+                clip-path: polygon(39% 29%, 36% 75%, 67% 85%, 83% 65%, 75% 52%, 67% 40%, 25% 45%, 57% 32%, 22% 61%, 19% 78%, 1% 42%, 13% 19%);
+            }
+            & div:nth-child(7) img{
+                clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);   
+            }
+            & div:nth-child(8) img{
+                clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);  
+            }
+            & div:nth-child(9) img{
+                border-radius: 29% 26% 47% 57% / 19% 10% 46% 47% ;  
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div><img src="http://picsum.photos/id/201/200/200" alt="a"></div>
+        <div><img src="http://picsum.photos/id/202/200/200" alt="b"></div>
+        <div><img src="http://picsum.photos/id/203/200/200" alt="c"></div>
+        <div><img src="http://picsum.photos/id/204/200/200" alt="d"></div>
+        <div><img src="http://picsum.photos/id/220/200/200" alt="e"></div>
+        <div><img src="http://picsum.photos/id/206/200/200" alt="f"></div>
+        <div><img src="http://picsum.photos/id/217/200/200" alt="g"></div>
+        <div><img src="http://picsum.photos/id/208/200/200" alt="h"></div>
+        <div><img src="http://picsum.photos/id/209/200/200" alt="i"></div>
+    </div>
+
+    <svg class="mask">
+        <clipPath id="svgMask1">  
+            <path d="M82.3135 49.5C90.3964 35.5 110.604 35.5 118.687 49.5L171.081 140.25C179.164 154.25 169.06 171.75 152.895 171.75H48.1055C31.9397 171.75 21.836 154.25 29.9189 140.25L82.3135 49.5Z" fill="#C4C4C4"/>
+        </clipPath>
+    </svg>
+    <svg class="mask">          
+            <clipPath id="svgMask2">
+            <rect x="121.272" width="103" height="180" rx="51" transform="rotate(41.5 121.272 0)" fill="#C4C4C4"/>          
+        </clipPath>
+    </svg>
+ 
+    <svg class="mask">
+        <clipPath id="svgMask3" clipPathUnits="objectBoundingBox">
+            <path d="M0.448,0.028 C0.482,0,0.534,0,0.568,0.028 L0.717,0.151 C0.727,0.159,0.738,0.165,0.751,0.169 L0.946,0.222 C0.99,0.233,1,0.274,1,0.313 L0.96,0.489 C0.957,0.501,0.957,0.513,0.96,0.525 L1,0.701 C1,0.74,0.99,0.781,0.946,0.792 L0.751,0.845 C0.738,0.849,0.727,0.855,0.717,0.863 L0.568,0.986 C0.534,1,0.482,1,0.448,0.986 L0.299,0.863 C0.29,0.855,0.278,0.849,0.265,0.845 L0.07,0.792 C0.026,0.781,0,0.74,0.01,0.701 L0.056,0.525 C0.06,0.513,0.06,0.501,0.056,0.489 L0.01,0.313 C0,0.274,0.026,0.233,0.07,0.222 L0.265,0.169 C0.278,0.165,0.29,0.159,0.299,0.151 L0.448,0.028" fill="#C4C4C4"/>
+       </clipPath>
+    </svg>
+</body>
+</html>
