@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;margin: 0;padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .wrapper{
+            width: 95dvw;height: 100dvh;
+            margin: auto;
+            min-width: 350px;
+        }
+        img{display: block;max-width: 100%;}
+        nav{
+            width: 50%;
+            background-color: burlywood;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 10px auto;
+            container: cnav / inline-size;
+            & h2{
+                display: flex;justify-content: center;
+            }
+            & section{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+            
+        }
+        main{
+            width: 70%;
+            background-color: cornflowerblue;
+            margin: auto;
+            border: 1px solid black;
+            padding: 10px;
+            container: cmain / inline-size;
+            & h2{
+                display: flex;justify-content: center;
+                margin-bottom:10px;
+            }
+            & article{
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                gap: 10px;
+                
+            }
+        }
+
+        @container (width<=450px){
+            h2{
+                background-color: lightsalmon;
+            }
+        }
+        @container (width>=600px){
+            h2{
+                color: #500fff;
+                font-size: 3rem;
+                text-transform: uppercase;
+            }
+        }
+        @container (width>=700px){
+            nav section{
+                justify-content: space-around;
+            }
+            main article{
+                flex-flow: row;
+                justify-content: space-between;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <h2> container nav </h2>
+            <section>
+                <div>
+                    <img src="http://picsum.photos/id/101/100/100">
+                </div>
+                <div>
+                    <img src="http://picsum.photos/id/102/100/100">
+                </div>
+            </section>
+        </nav>
+        <main>
+            <h2> container main </h2>
+            <article>
+                <div>
+                    <img src="http://picsum.photos/id/401/100/100" alt="">
+                </div>
+                <div>
+                    <img src="http://picsum.photos/id/402/100/100" alt="">
+                </div>
+                <div>
+                    <img src="http://picsum.photos/id/403/100/100" alt="">
+                </div>
+                <div>
+                    <img src="http://picsum.photos/id/404/100/100" alt="">
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
