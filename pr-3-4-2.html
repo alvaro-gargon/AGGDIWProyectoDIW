@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            width: 95dvw;height: 95dvh;
+        }
+        .button{
+            background-color: #a77882;
+            width: max-content;height: max-content;
+            margin-top: 100px;
+            padding: 50px;
+            margin: auto;
+            border-radius: 6px;
+            & span{
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 4rem;
+                font-weight: 900;
+                letter-spacing: 0.5rem;
+                background: url(http://picsum.photos/id/400/200/200) left/cover;
+                background-clip: text; /* con esto haces que la imagen quede debajo del texo unicamente*/
+                color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button">
+            <span>FONDO TEXTO</span>
+        </div>
+    </div>
+</body>
+</html>

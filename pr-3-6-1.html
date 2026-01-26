@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 80vw;
+            margin:auto;
+            min-width: 480px;
+        }
+        main{
+            background-color: aquamarine;
+            width: 50%;
+            margin-bottom: 20px;
+            /* container-name: cmain;
+            container-type: inline-size; */
+            container: cmain / inline-size;
+        }
+        aside{
+            background-color: burlywood;
+            width: 50%;
+            container: caside / inline-size;
+        }
+        @container cmain (min-width:30rem){
+            *{
+                font-size: 1.5rem;
+                color: red;
+            }
+        }
+        @container caside (min-width:40rem){
+            p{
+                display: none;
+            }
+            h2{
+                color: blue;
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body> 
+    <main> 
+        <h2> MAIN </h2> 
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, hic! Repellat, necessitatibus dignissimos tempora aspernatur quae fugiat laudantium rem ipsum iste 
+            accusamus doloremque, maiores expedita illum, nostrum amet labore. Assumenda. Main Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ratione asperiores nulla alias, voluptates iusto est ipsum soluta recusandae labore repellat ex impedit unde quas? Quo nemo aliquam debitis esse fugit! 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum eaque iure cum sit aliquid enim placeat est minus, nemo a officia, possimus porro nesciunt 
+            architecto id et animi neque fugiat!. 
+        </p> 
+    </main> 
+    <aside> 
+        <h2>ASIDE</h2> 
+        <p> parrafo Lorem ipsum dolor sit amet. </p> 
+    </aside> 
+</body>
+</html>
