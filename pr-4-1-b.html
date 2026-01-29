@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;font-size: 1.2rem;}
+        .container{
+            width: 90vw;height: 90vh;
+            margin: auto;
+            background-color: #bbb;
+            display: flex;
+            justify-content: center;align-items: center;
+        }
+        article{
+            position: relative;
+            width: 300px;height: 400px;
+            background-color:#5fa082;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;align-items: center;
+            gap: 5px;
+            box-shadow: 5px 5px 5px ;
+            transition: width 1s 1s, height 1s 2s, border-radius 1s 3s, background-color 1s 4s, border 1s 5s, padding 1s 6s, box-shadow 1s 7s;
+            overflow: hidden;
+            & h2{
+                margin-bottom: 10px;
+                color: #e88c00;
+            }
+            & p{
+                position: relative;
+                left: 100%;
+                transition: all 1s ease-in-out;
+            }
+        }
+        article:hover{
+            width: 350px;height: 450px;
+            border-radius: 50%;
+            background-color: purple;
+            border: 3px solid #a77041;
+            padding: 10px;
+            box-shadow: 0 0 7px 10px;
+            & p{
+                left: 0;
+            }
+        }
+        article p:nth-child(1){transition-delay: 0s;}
+        article p:nth-child(2){transition-delay: 1s;}
+        article p:nth-child(3){transition-delay: 2s;}
+        article p:nth-child(4){transition-delay: 3s;}
+        article p:nth-child(5){transition-delay: 4s;}
+        article p:nth-child(6){transition-delay: 5s;}
+        article p:nth-child(7){transition-delay: 6s;}
+        article p:nth-child(8){transition-delay: 7s;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <h2>Voy cambiando</h2>
+            <p>Tamaño ancho</p>
+            <p>Tamaño largo</p>
+            <p>Boder radius</p>
+            <p>Color de fondo</p>
+            <p>Borde</p>
+            <p>Padding</p>
+            <p>Sombra</p>
+        </article>
+    </div>
+</body>
+</html>
