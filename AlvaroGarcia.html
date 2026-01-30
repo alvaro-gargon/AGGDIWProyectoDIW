@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: minmax(300px,1fr) minmax(350px,2fr);
+            gap: 20px;
+        }
+        .card{
+            width: 90%;height: 350px;
+            background-color: darkcyan;
+            border-radius: 10px;
+            container: ccard/ inline-size;
+            margin-left: 30px;
+            margin-top: 30px;
+            & button{
+                width: 50%;height: 40px;
+                margin: auto;
+            }
+        }
+        .box{
+            width: 100%;height: 100%;
+            border-radius: 10px;
+            display: flex;
+            flex-flow: column;
+        }
+        @container ccard (width<400px){
+            .box{
+                background-color: #c3691e;
+            }
+        }
+        @container ccard (width>=600px){
+            h3{
+                color: white;
+                font-size: 3rem;
+            }
+        }
+        @container ccard (width>=850px){ 
+            p{
+                color: red;
+            }
+            button{
+                background-color: yellow;
+            }
+            .box{
+                background-color: cornflowerblue;
+            }
+            .card:nth-child(1) .box{
+                background-color: hotpink;
+            }
+        }  
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <div class="card">
+            <div class="box">
+                <h3>Titulo 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    numquam quidem explicabo officiis animi at, nam, magnam excepturi mollitia ex
+                    soluta nobis neque asperiores officia aspernatur harum? Iusto, quaerat facilis!</p>
+                <button>ENVIAR</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <h3>Titulo 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    numquam quidem explicabo officiis animi at, nam, magnam excepturi mollitia ex
+                    soluta nobis neque asperiores officia aspernatur harum? Iusto, quaerat facilis!</p>
+                <button>ENVIAR</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <h3>Titulo 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    numquam quidem explicabo officiis animi at, nam, magnam excepturi mollitia ex
+                    soluta nobis neque asperiores officia aspernatur harum? Iusto, quaerat facilis!</p>
+                <button>ENVIAR</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <h3>Titulo 4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    numquam quidem explicabo officiis animi at, nam, magnam excepturi mollitia ex
+                    soluta nobis neque asperiores officia aspernatur harum? Iusto, quaerat facilis!</p>
+                <button>ENVIAR</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
