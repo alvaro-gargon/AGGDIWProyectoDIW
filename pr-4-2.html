@@ -8,12 +8,53 @@
         *{padding: 0;margin: 0;box-sizing: border-box;font-family: sans-serif;}
         .container{
             width: 90dvw;height: 90dvh;
-            margin: auto;
+            margin: 20px auto;
         }
         ul{
             list-style: none;
-            width: 400px;
+            width: 500px;
             height: 80px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            overflow: hidden;
+            & li{
+                padding: 0;
+                & a{
+                    display: block;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.3rem;
+                }
+            }
+
+        }
+        .menu1{
+            background-color: #3fa46a;
+            & li{
+                border-top: 5px solid white;
+                border-bottom: 5px solid white;
+                padding: 32px 0;
+                transition: padding 1s ease;
+                &:hover{
+                    transition: padding 1s ease; /* si lo pones dentro, la animacion solo lo hace al entrar*/
+                    padding: 3px 0;
+                }
+            }
+        }
+        .menu2{
+            background-color: #5175c0;
+            & li{
+                transition: all 1s ease;
+            }
+            & li:hover{
+                background-color: #ced8ed;
+                padding: 20px;
+                & a{
+                    color: orange;
+                }
+            }
         }
     </style>
 </head>
