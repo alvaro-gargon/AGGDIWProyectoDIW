@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;margin: 0;padding: 0;
+        }
+        .wrapper{
+            position: relative;
+            width: 420px;height: 420px;
+            margin: 200px auto;
+            background-color: #eee;
+            padding: 20px;
+        }
+        .box{
+            position: relative;
+            width: 100px;height: 100px;
+            animation: cuaCir 3s linear infinite;
+        }
+
+        @keyframes cuaCir {
+            0%,100%{
+                top: 0;left: 0;
+                background-color: red;
+            }
+            25%{
+                top: 0;left: 280px;
+                background-color: yellow;
+                border-radius: 50%;
+            }
+            50%{
+                top: 280px;left: 280px;
+                border-radius: 0%;
+                background-color: blue;
+            }
+            75%{
+                top: 280px;left:0;
+                border-radius: 50%;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>
