@@ -43,6 +43,9 @@
             font-size: 1.5rem;
             border: 1px solid var(--color2);
             grid-row: 2/3;
+            &:active{
+                animation: girar 1s ease-in-out;
+            }
         }
         .helice{
             grid-column: 1/-1;
@@ -63,7 +66,7 @@
         #x1:checked ~ .helice{ --v:5s;}
         #x2:checked ~ .helice{ --v:2.5s;}
         #x3:checked ~ .helice{ --v:1s;}
-        #stop:checked ~ .helice{ --v:0s;}
+        #stop:checked ~ .helice{ animation-play-state: paused;}
     </style>
 </head>
 <body>
