@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;margin: 0;padding: 0;
+        }
+        .container{
+            width: 700px;height: 700px;
+            margin: auto;
+            background-color: yellowgreen;
+            animation: changeColor 2s linear infinite alternate;
+        }
+        .wrapper{
+            position: relative;
+            width: 90%;height: 90%;
+            background-color: #73dccd;
+        }
+        .container,.wrapper{
+            display: flex;
+            justify-content: center;align-items: center;
+        }
+        .suelo{
+            position: absolute;
+            bottom: 10px;
+            width: 90%;height: 380px;
+            /* border-bottom: 20px solid black;
+            border-right: 20px solid black;
+            border-left: 20px solid black; */
+            border: 20px solid black;
+            border-top: transparent;
+        }
+        .pelota{
+            position: absolute;
+            width: 80px;height: 80px;
+            left: 0;top: 280px;
+            background-color: red;
+            border-radius: 50%;
+            animation: botar 1s ease infinite alternate;
+        }
+        @keyframes changeColor {
+            to{
+                background-color: cornflowerblue;
+            }
+        }
+        @keyframes botar {
+            0%{
+                left: 0;top: 280px;
+            }
+            25%{
+                left: 22%; top: 0px;
+            }
+            50%{
+                left: 44%;top: 280px;
+            }
+            75%{
+                left: 66%;top: 0px;
+            }
+            100%{
+                left: 85%;top: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="suelo">
+                <div class="pelota"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
