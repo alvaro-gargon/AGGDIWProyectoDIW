@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;padding: 0;margin: 0;
+            font-family: sans-serif; color: white;
+        }
+        .container{
+            width: 700px;height: 700px;
+            margin: auto;
+            background-color: #222;
+            display: grid;
+            place-items: center;
+        }
+        .rodamiento{
+            width: 400px;height: 400px;
+            background-color: silver;
+            border-radius: 100%;
+            border: 20px dashed silver;
+            background-image: radial-gradient(black 20%, silver 20%);
+            background-clip: padding-box;
+            animation: girar 3s linear infinite;
+        }
+        @keyframes girar {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        #on:checked ~ .rodamiento{
+            animation-play-state: running;
+            
+        }
+        #off:checked ~ .rodamiento{
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RODAMIENTO</h1>
+        <input type="radio" name="rd" id="on">
+        <label for="on">ON</label>
+
+        <input type="radio" name="rd" id="off" checked>
+        <label for="off">OFF</label>
+        <div class="rodamiento"></div>
+    </div>
+</body>
+</html>
